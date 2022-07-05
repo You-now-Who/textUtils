@@ -11,7 +11,7 @@ function App() {
     if(darkMode === 'light')
       {
         setdarkMode('dark')
-        document.body.style.backgroundColor = 'black';
+        document.body.style.backgroundColor = '#1f3041';
       }
     
     if(darkMode === 'dark')
@@ -19,8 +19,6 @@ function App() {
         setdarkMode('light')
         document.body.style.backgroundColor = 'white';
       }
-
-      console.log(darkMode)
   }
 
   return (
@@ -28,7 +26,7 @@ function App() {
     <>
     <Navbar title="TextUtils" aboutText = "About" darkMode={darkMode} toggleMode = {toggleMode} />
     <div className="container my3">
-      <TextForm heading = "Enter the text to analyze"/>
+      <TextForm heading = "Enter the text to analyze" darkMode={darkMode} toggleMode = {toggleMode}/>
     </div>
     
     

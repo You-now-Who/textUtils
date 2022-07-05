@@ -81,15 +81,15 @@ export default function TextForm(props) {
         <h1>{props.heading} </h1>
         <div className="mb-3">
           {/* Text area for the text to go in */}
-          <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8" placeholder="Enter your text here" style={{backgroundColor: props.darkMode === 'dark' ? '#343A40':'white', color: props.darkMode === 'dark' ? 'white':'black'}}></textarea>
+          <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8" placeholder="Enter your text here" style={{backgroundColor: props.darkMode === 'dark' ? '#1f3041':'white', color: props.darkMode === 'dark' ? 'white':'black'}}></textarea>
         </div>
 
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}> Convert to uppercase </button>
-        <button className="btn btn-primary mx-2" onClick={handleLowClick}>Convert to lowercase </button>
-        <button className="btn btn-primary mx-2" onClick={handleCapitalFirstClick}> Capitalise first letter </button>
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}> Remove white spaces </button>
-        <button className="btn btn-primary mx-2" onClick={handleCopy}> Copy text </button>
-        <button className="btn btn-danger mx-2" onClick={handleClear}> Clear text </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}> Convert to uppercase </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleLowClick}>Convert to lowercase </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleCapitalFirstClick}> Capitalise first letter </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}> Remove white spaces </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}> Copy text </button>
+        <button className="btn btn-danger mx-2 my-2" onClick={handleClear}> Clear text </button>
       
       </div>
 
