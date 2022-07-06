@@ -99,7 +99,7 @@ export default function TextForm(props) {
         
 
         <p><strong>{text.length>0 ? text.trim().split(" ").length : 0}</strong> words, <strong>{text.length}</strong> characters </p>
-        <p><strong>{(Math.round((text.length) / 42.7 * 1000) / 1000).toFixed(3)}</strong> minutes to read this text.</p>
+        <p><strong>{(Math.round((text.length) / 1500 * 1000) / 1000).toFixed(3)}</strong> minutes to read this text.</p>
 
         <h3>Preview</h3>
         <p>{text}</p>
