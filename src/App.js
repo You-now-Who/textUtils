@@ -3,6 +3,13 @@ import './App.css';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import About from './components/About';
+import {
+  BrowserRouter as Router,
+  Routes,
+  withRouter,
+  Route
+} from "react-router-dom";
 
 function App() {
   const [darkMode, setdarkMode] = useState('light'); //State variable to show if darkmode enabled or not
@@ -39,12 +46,18 @@ function App() {
   return (
 
     <>
+    <Router>
     <Navbar title="TextUtils" aboutText = "About" darkMode={darkMode} toggleMode = {toggleMode} />
     <Alert alert={alert}/>
-    <div className="container my3">
-      <TextForm heading = "Enter the text to analyze" darkMode={darkMode} toggleMode = {toggleMode}/>
-    </div>
-    
+      <div className="container my3">
+        <Routes>
+          <Route exact path="/about" element={<About />}>
+          </Route>
+          <Route exact path="/" element={<TextForm heading = "Enter the text to analyze" darkMode={darkMode} toggleMode = {toggleMode}/>}>
+          </Route>
+        </Routes>
+      </div>
+    </Router>
     
     </>
     );
