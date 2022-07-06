@@ -46,18 +46,19 @@ function App() {
   return (
 
     <>
-    <Router>
+    {/* <Router> */}
     <Navbar title="TextUtils" aboutText = "About" darkMode={darkMode} toggleMode = {toggleMode} />
     <Alert alert={alert}/>
       <div className="container my3">
-        <Routes>
+      <TextForm heading = "Enter the text to analyze" darkMode={darkMode} toggleMode = {toggleMode}/>
+      </div>
+        {/* <Routes>
           <Route exact path="/about" element={<About />}>
           </Route>
           <Route exact path="/" element={<TextForm heading = "Enter the text to analyze" darkMode={darkMode} toggleMode = {toggleMode}/>}>
           </Route>
         </Routes>
-      </div>
-    </Router>
+    </Router> */}
     
     </>
     );
